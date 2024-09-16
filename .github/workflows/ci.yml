@@ -14,18 +14,39 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
+        elixir: ['1.12', '1.13', '1.14', '1.15', '1.16', '1.17']
+        otp: ['23', '24', '25', '26', '27']
+        exclude:
+          - elixir: '1.12'
+            otp: '25'
+          - elixir: '1.12'
+            otp: '26'
+          - elixir: '1.12'
+            otp: '27'
+          - elixir: '1.13'
+            otp: '26'
+          - elixir: '1.13'
+            otp: '27'
+          - elixir: '1.14'
+            otp: '27'
+          - elixir: '1.15'
+            otp: '23'
+          - elixir: '1.15'
+            otp: '27'
+          - elixir: '1.16'
+            otp: '23'
+          - elixir: '1.16'
+            otp: '27'
+          - elixir: '1.17'
+            otp: '23'
+          - elixir: '1.17'
+            otp: '24'
         include:
-          - elixir: '1.12'
-            otp: '23.3'
-          - elixir: '1.12'
-            otp: '24.0'
-          - elixir: '1.13.4'
-            otp: '24.0'
-          - elixir: '1.13.4'
-            otp: '25.0'
+          - elixir: '1.13'
+            otp: '25'
             lint: true
-          - elixir: '1.14.0'
-            otp: '25.0'
+          - elixir: '1.14'
+            otp: '26'
             lint: true
           - elixir: '1.15'
             otp: '26'
