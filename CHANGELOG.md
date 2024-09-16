@@ -1,4 +1,4 @@
-## v3.0.0 (2024-02-24)
+## v2.1.0 (2024-02-24)
 
 - Upgraded to Heroicons v2.1.1: the new "micro" type is now supported.
 - Updated dependencies.

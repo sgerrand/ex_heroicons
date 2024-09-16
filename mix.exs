@@ -1,7 +1,7 @@
 defmodule Heroicons.MixProject do
   use Mix.Project
 
-  @version "3.0.0"
+  @version "2.1.0"
 
   def project do
     [
